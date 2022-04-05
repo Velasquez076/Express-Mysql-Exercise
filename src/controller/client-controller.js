@@ -66,7 +66,7 @@ controllerConnection.edit = (req, res) => {
 // Metodo para Eliminar registros de Cliente -----------------------------------
 controllerConnection.deleteClient = (req, res) => {
     const { id } = req.params;
-    const sql = `DELETE clientes WHERE id_clientes = ${id}`;
+    const sql = `DELETE FROM clientes WHERE id_clientes = ${id}`;
     miConexion.query (sql, (err, result) => {
         if (err){
             console.log('Error: ', err);
